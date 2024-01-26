@@ -42,9 +42,7 @@ async function getSongs(folder) {
 
     let songUl = document.querySelector(".songList").getElementsByTagName("ul")[0]
     songUl.innerHTML = '';
-    console.log(songs);
     for (const song of songs) {
-        console.log(song);
         songUl.innerHTML = songUl.innerHTML + `<li>
         <img class="songpic invert" src="images/music.svg" alt="">
         <div class="info">
@@ -87,10 +85,8 @@ const playMusic = (track, pause = false) => {
 
         }, 100);
     }
-    console.log(track);
     document.querySelector('.songInfo').innerHTML = `Now : ${decodeURI(track.replace('.mp3', ''))}`
     for (let i = 0; i < songs.length; i++) {
-        // console.log( songs[i].replaceAll("%20", " "), track.replaceAll("%20", " "));
         if (songs[i].replaceAll("%20", " ") == track.replaceAll("%20", " ")) {
             if (i + 1 != songs.length) {
                 document.querySelector('.upnext').innerHTML = `Up Next : ${decodeURI(songs[i + 1].replace('.mp3', ''))}`
@@ -154,7 +150,6 @@ async function displayAlbums() {
 
 async function main() {
     await getSongs('Songs/2')
-    console.log(songs);
 
     playMusic(songs[0], true)
 
