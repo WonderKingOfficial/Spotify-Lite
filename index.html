@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Web Player: Music for everyone</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/utility.css">
+</head>
+
+<body>
+    <div class="container flex bg-black">
+        <div class="left  bg-black">
+            <img class="closeHamburger invert" src="images/close.svg" alt="">
+
+            <div class="home rounded bg-grey m-1 p-1" style="
+            margin-bottom: 9px;
+        ">
+                <div class="logo"><img class="invert" src="images/logo.svg" alt=""></div>
+                <ul>
+                    <li><img class="invert" src="images/home.svg" alt="home">Home</li>
+                    <li><img class="invert" src="images/search.svg" alt="search">Search</li>
+                </ul>
+            </div>
+
+            <div class="library rounded bg-grey m-1 p-1">
+
+                <div class="heading">
+                    <img class="invert" src="images/playlist.svg" alt="playlist">
+                    <h2>Library</h2>
+                </div>
+
+                <div class="songList">
+                    <ul>
+
+
+                    </ul>
+                </div>
+
+
+            </div>
+
+        </div>
+        <div class="right rounded bg-grey" style="filter: blur(0px);">
+            <div class="header">
+                <div class="nav">
+                    <img class="hamburger invert" src="images/hamburger.svg" alt="">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-chevron-left">
+                        <path d="m15 18-6-6 6-6" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-chevron-right">
+                        <path d="m9 18 6-6-6-6" />
+                    </svg>
+                </div>
+                <div class="buttons">
+                    <button class="signUp">Sign up</button>
+                    <button class="logIn" id="logIn">Log in</button>
+                </div>
+            </div>
+            <div class="spotifyPlaylists">
+                <h1>Spotify Playlists</h1>
+                <div class="cardContainer">
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="playBar">
+        <div class="currentCard">
+            <div class="nowNext">
+                <img class="currSongpic invert" src="images/playlist.svg" alt="">
+                <div class="details">
+                    <div class="songInfo">HLOOOO</div>
+                    <div class="upnext">Chaloooo</div>
+                </div>
+            </div>
+        </div>
+        <div class="controls">
+            <div class="songButtons">
+                <img id="previous" class="invert" src="images/previous.svg" alt="">
+                <img id="play" class="invert" src="images/play.svg" alt="">
+                <img id="next" class="invert" src="images/next.svg" alt="">
+            </div>
+            <div class="songTimeBar">
+                <div class="songTime">-:--</div>
+                <input class="playTime" type="range" step="0.5" value="0" min="0" max="100">
+                <div class="songDuration">-:--</div>
+            </div>
+        </div>
+        <div class="volumeContainer">
+            <div class="volume">
+                <div class="seekVol">
+                    <div class="volPercent">
+                        <span>100%</span>
+                    </div>
+                    <input class="volRange" type="range" step="1" value="100" min="0" max="100">
+                </div>
+                <img class="volImg invert" src="images/volume.svg" alt="">
+            </div>
+        </div>
+
+        <!-- <div class="seekBar">
+            <div class="circle">
+            </div>
+        </div> -->
+    </div>
+</body>
+<script src="js/script.js"></script>
+<!-- <script src="js/search.js"></script> -->
+
+</html>
